@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Varela Round", sans-serif;
+}
+/* Customize the scrollbar */
+.overlay::-webkit-scrollbar {
+    display: none;           /* height of the entire scrollbar */
+}
+textarea::-webkit-scrollbar {
+    display: none;           /* height of the entire scrollbar */
+}
+
+html{
+    font-size: 63.5%;
+    overflow-x: hidden;
+}
+body{
+    background-color: rgb(224, 228, 231);
+    overflow-x: hidden;
+}
+header{
+    background-color: rgb(231, 9, 91);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    z-index: 999999999999;
+}
+header h1{
+    font-size: 3rem;
+    color: white;
+}
+.add_notee_main{
+    position: relative;
+    width: 100vw;
+    height: 6rem;
+    margin-top: 2rem;
+    display: grid;
+    place-items: center;
+}
+.addNote {
+    background-color: rgb(231, 9, 91);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 5rem;
+    gap: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    border: .2rem solid rgb(231, 9, 91);
+    cursor: pointer;
+    transition: .3s ease;
+}
+.addNote:hover{
+    background-color: transparent;
+    color: rgb(231, 9, 91);
+}
+.todo_data_main{
+    padding:5rem 0;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3,45rem);
+    gap: 2rem;
+}
+.todo_data{
+ background-color: white;
+ border-radius: .5rem;
+    display: grid;
+    overflow-y: scroll;
+    position: relative;
+    box-shadow: .2rem .2rem 1rem rgba(0,0,0,.5);
+}
+.oparetaion{
+    display: flex;
+    font-size: 1.5rem; 
+    color:white;
+    gap: 1rem;
+    align-items: center;
+    justify-content: right;
+    padding:.5rem 2rem;
+}
+.edit_main,.remove_main{
+    background-color: rgb(231, 9, 91);
+    border-radius:10%;
+    padding: 1rem;
+    border: .2rem solid rgb(231, 9, 91);
+    transition: .3s ease;
+    cursor: pointer;
+}
+.remove_main{
+    background-color: red;
+    border: .2rem solid red;
+}
+.edit_main:hover{
+    background-color:transparent;
+    color: rgb(231, 9, 91);
+}
+.remove_main:hover{
+    background-color:transparent;
+    color: red;
+}
+.overlay,textarea{
+    height: 15rem;
+    margin-top: 2rem;
+    overflow-x: hidden;
+    width: 100%;
+}
+.overlay{
+    font-size: 2rem;
+    padding: 1rem;
+    overflow-y:visible;
+}
+textarea{
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    padding: 1rem;
+    overflow-y: auto;
+}
+.hide{
+    display: none;
+}
+.save{
+    height:1rem;
+    width: 1rem;
+    opacity: .5;
+    border-radius: 50%;
+    position: absolute;
+    background-color: green;
+    left: 2rem;
+    color: white;
+}
+@media (max-width:1432px) {
+    .todo_data_main{
+        grid-template-columns: repeat(3,40rem);
+    }
+}
+@media (max-width: 1289px) {
+    .todo_data_main {
+        grid-template-columns: repeat(3, 38rem);
+    }
+}
+@media (max-width: 1225px) {
+    .todo_data_main {
+        grid-template-columns: repeat(3, 34rem);
+    }
+}
+@media (max-width: 1108px) {
+    .todo_data_main {
+        grid-template-columns: repeat(2, 50rem);
+    }
+}
+@media (max-width: 1055px) {
+    .todo_data_main {
+        grid-template-columns: repeat(2, 45rem);
+    }
+}
+@media (max-width:956px) {
+    .todo_data_main {
+        grid-template-columns: repeat(2, 40rem);
+    }
+}
+@media (max-width: 857px) {
+    .todo_data_main {
+        grid-template-columns: repeat(2, 35rem);
+    }
+}
+@media (max-width:748px) {
+    .todo_data_main {
+        grid-template-columns: repeat(2, 30rem);
+    }
+}
+@media (max-width: 650px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 60rem);
+    }
+}
+@media (max-width: 630px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 50rem);
+    }
+}
+@media (max-width:523px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 45rem);
+    }
+}
+@media (max-width: 469px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 40rem);
+    }
+}
+@media (max-width: 421px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 35rem);
+    }
+}
+@media (max-width: 376px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 30rem);
+    }
+}
+@media (max-width: 318px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 25rem);
+    }
+}
+@media (max-width:270px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 23rem);
+    }
+}
+@media (max-width: 246px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 20rem);
+    }
+}
+@media (max-width: 216px) {
+    .todo_data_main {
+        grid-template-columns: repeat(1, 17rem);
+    }
+}
